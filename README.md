@@ -7,6 +7,10 @@ The purpose of this Hackathon is to implement the proposed design in 28 nm PDK (
 4. [Implemented Design](#implemented-design)
 5. [Output Waveforms](#output-waveforms)
 6. [Schematic Netlist](#schematic-netlist)
+7. [Challenges and Limitations](#challenges-and-limitations)
+8. [References](#references)
+9. [Acknowledgements](#acknowledgements)
+10. [Author](#author)
 ## Abstract
 This report describes the design and Implementation of 4:1 Multiplexer using CMOS logic using the Cloud-based [Synopsys](https://www.synopsys.com/) [Custom Compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) tool and the [Primewave](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html) tool at the 28nm CMOS technology node. Multiplexer circuit selects 1 output data line from multiple input data lines with the help of input select lines. This design discussed in the report uses 4 input data lines and 2 input select lines to get the 1 output data line.
 
@@ -72,17 +76,23 @@ As per the reference circuit, the 4:1 MUX is designed using CMOS logic and both 
 
 ## Implemented Design
 
+By opening the lab instance then creating a  new folder and opening it in terminal we have to create a lib.def file and load the PDK into it. Then we have to access the server and launch the Synopsys custom compiler tool. After that by opening and creating a library and a new cell in it and a schematic view for it we have to implement the design and then Check and Save the design. 
+
 The schematic of the implemented design is as shown below in Figure(3)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/Schematic%20of%20Design.png" width="700" height ="600"></p>
 <figcaption><p align = "center">Figure(3) Implemented Circuit Schematic</p></figcaption>
 </figure>
 
+After that we have to create a symbol view for the above schematic view and then Check and Save it.  
+
 The symbol of the implemented design is as shown below in Figure(4)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/cir_imp_sym.png" width="300" height ="400"></p>
 <figcaption><p align = "center">Figure(4) Implemented Circuit Symbol</p></figcaption>
 </figure>
+
+After creating the symbol view create another cell in the library fro testbench and create the schematic view and then Check and Save it. 
 
 The schematic of the testbench of the design is as shown below in Figure(5)
 <figure>
@@ -91,6 +101,15 @@ The schematic of the testbench of the design is as shown below in Figure(5)
 </figure>
 
 ## Output Waveforms
+
+For simulation purpose we have to iniate the primewave tool and give model files, mode of analysis and select the parameters from the schematic to be observed under waveview. Then save the state and generate a Netlist and Run the simulation. 
+
+The output waveforms obtained after the simulation are as shown below in Figure(6)
+<figure>
+<p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/op_waveform.png" width="1000" height ="300"></p>
+<figcaption><p align = "center">Figure(5) Implemented Testbench Circuit Schematic</p></figcaption>
+</figure>
+
 ## Schematic Netlist
 
 The final Netlist is as follows:
@@ -180,3 +199,26 @@ c33 output gnd! c=1p
 
 .end
 ```
+## Challenges and limitations
+- The main challange is to have less rise time, fall time and propagation delay for the input.
+- Another big challenge is to calculate the W/L ratio
+- The same logic can be implemented using only 8 MOSFETs either NMOS or PMOS at same technology node but by using the CMOS we can have high propagation speed but the complexity of the design increases.
+
+## References
+[1]. [Multiplexer Wikipedia](https://en.wikipedia.org/wiki/Multiplexer)
+
+[2]. [Combinational Circuits Electronics Tutorials](https://www.electronicstutorials.ws/combination/comb_2.html)
+
+[3]. [CMOS Logic Electronics Turoials](https://www.electronics-tutorial.net/Digital-CMOSDesign/Pass-Transistor-Logic/4-1-multiplexer-using-CMOSlogic/)
+
+## Acknowledgements
+- [Synopsys](https://www.synopsys.com/)
+- [IIT Hyderabad](https://iith.ac.in/)
+- [Analog Cloud Based Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
+- [VLSI System Design](https://www.vlsisystemdesign.com/)
+- [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
+- [Chinmaya Panda](https://ee.iith.ac.in/images/staff/panda.jpeg)
+- [Sumanto Kar](https://www.linkedin.com/in/sumanto-kar-0424391a9/)
+- [Sameer Durgoji](https://www.linkedin.com/in/sameer-s-durgoji-340b26180/)
+## Author
+[Gaeya Sri Satya Vinnakota](https://www.linkedin.com/in/vgss/), BTech III year, Electronics Engineering Department, [Sardar Vallabhbhai National Institute Of Technology](https://www.svnit.ac.in/)
