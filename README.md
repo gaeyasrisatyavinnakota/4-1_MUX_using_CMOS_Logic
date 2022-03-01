@@ -2,14 +2,17 @@
 The purpose of this Hackathon is to implement the proposed design in 28 nm PDK (Process Design Kit) using CMOS technology. After doing the literature survey the [Initial report](https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/GAEYA%20SRI%20SATYA%20VINNAKOTA_INITIAL%20REPORT_ACBDH.pdf) was submitted. The design was implemanted and this is the final Report Submission for successful completion of 4:1 MUX using CMOS Logic design and simulation, for [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
 ## Table of Contents
 1. [Abstract](#abstract)
-2. [Implemented Circuit details](#implemented-circuit-details)
-3. 
+2. [Details of the Circuit](#details-of-the-circuit)
+3. [Working of the Circuit](#working-of-the-circuit)
+4. [Implemented Design](#implemented-design)
+5. [Output Waveforms](#output-waveforms)
+6. [Schematic Netlist](#schematic-netlist)
 ## Abstract
 This report describes the design and Implementation of 4:1 Multiplexer using CMOS logic using the Cloud-based [Synopsys](https://www.synopsys.com/) [Custom Compiler](https://www.synopsys.com/implementation-and-signoff/custom-design-platform/custom-compiler.html) tool and the [Primewave](https://www.synopsys.com/implementation-and-signoff/ams-simulation/primewave.html) tool at the 28nm CMOS technology node. Multiplexer circuit selects 1 output data line from multiple input data lines with the help of input select lines. This design discussed in the report uses 4 input data lines and 2 input select lines to get the 1 output data line.
 
-## Implemented Circuit Details
+## Details of the Circuit
 A Multiplexer circuit, shortly called MUX, is used to select a data line as output from multiple input data lines by using input select lines. To get an output data line from N input data lines that is N:1 MUX, we require log<sub>2</sub><sup>N</sup> select lines.
-The representation of 4:1 MUX is as shown below in figure(1)
+The representation of 4:1 MUX is as shown below in Figure(1)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/mux_symbol.png" width="300" height ="300"></p>
 <figcaption><p align = "center">Figure(1) 4:1 MUX Representation</p></figcaption>
@@ -52,7 +55,7 @@ The truth table of the 4:1 MUX is as shown,
 |1|0|B|
 |1|1|A|
 --->
-The reference circuit is as shown below in figure(2)
+The reference circuit is as shown below in Figure(2)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/cir_img.png" width="600" height ="500"></p>
 <figcaption><p align = "center">Figure(2) Reference Circuit</p></figcaption>
@@ -60,7 +63,7 @@ The reference circuit is as shown below in figure(2)
 
 As per the reference circuit, the 4:1 MUX is designed using CMOS logic and both the Pull-up (made of the PMOS) and pull-down (made of the NMOS) networks pull the output to the input data lines, and the input select lines are given to the MOSFETs' gates.
 
-## Working of the design
+## Working of the Circuit
 
 - When both the select lines are logic 0, NMOS in the pull-down network and PMOS  in the pull-up network of D input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the D input line.
 - When select lines 0 is logic 0 and select line 1 is logic 1, NMOS in the pull-down network and PMOS  in the pull-up network of C input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the C input line.
@@ -69,6 +72,25 @@ As per the reference circuit, the 4:1 MUX is designed using CMOS logic and both 
 
 ## Implemented Design
 
+The schematic of the implemented design is as shown below in Figure(3)
+<figure>
+<p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/Schematic%20of%20Design.png" width="700" height ="600"></p>
+<figcaption><p align = "center">Figure(3) Implemented Circuit Schematic</p></figcaption>
+</figure>
+
+The symbol of the implemented design is as shown below in Figure(4)
+<figure>
+<p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/cir_imp_sym.png" width="300" height ="400"></p>
+<figcaption><p align = "center">Figure(4) Implemented Circuit Symbol</p></figcaption>
+</figure>
+
+The schematic of the testbench of the design is as shown below in Figure(5)
+<figure>
+<p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/tb_imp_sch.png" width="900" height ="700"></p>
+<figcaption><p align = "center">Figure(5) Implemented Testbench Circuit Schematic</p></figcaption>
+</figure>
+
+## Output Waveforms
 ## Schematic Netlist
 
 The final Netlist is as follows:
