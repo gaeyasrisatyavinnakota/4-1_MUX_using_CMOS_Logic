@@ -214,7 +214,7 @@ c33 output gnd! c=1p
 ## Acknowledgements
 - [Synopsys](https://www.synopsys.com/)
 - [IIT Hyderabad](https://iith.ac.in/)
-- [Analog Cloud Based Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
+- [Analog Cloud Based Hackathon](https://hackathoniith.in/)
 - [VLSI System Design](https://www.vlsisystemdesign.com/)
 - [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)
 - [Chinmaya Panda](https://ee.iith.ac.in/images/staff/panda.jpeg)
