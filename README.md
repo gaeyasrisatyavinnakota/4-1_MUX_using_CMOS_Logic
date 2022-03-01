@@ -1,5 +1,5 @@
 # 4:1 MUX using CMOS Logic
-In the [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/) of the problem statement is to implement the proposed design in 28 nm PDK (Process Design Kit) using CMOS technology. After doing the literature survey the [Initial report](https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/GAEYA%20SRI%20SATYA%20VINNAKOTA_INITIAL%20REPORT_ACBDH.pdf) was submitted. The design was implemanted and this is the final Report Submission for successful completion of Design of 4:1 MUX using CMOS Logic and implemenatation along with simulation, for [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
+In the [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/) of the problem statement is to implement the proposed design in 28 nm PDK (Process Design Kit) using CMOS technology. After doing the literature survey the [Initial report](https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/GAEYA%20SRI%20SATYA%20VINNAKOTA_INITIAL%20REPORT_ACBDH.pdf) was submitted. The design was implemanted and this is the final Report Submission of successfully completed Design of 4:1 MUX using CMOS Logic and implemenatation along with simulation, for [Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
 ## Table of Contents
 1. [Abstract](#abstract)
 2. [Details of the Circuit](#details-of-the-circuit)
@@ -200,8 +200,7 @@ c33 output gnd! c=1p
 .end
 ```
 ## Challenges and limitations
-- The main challange is to have less rise time, fall time and propagation delay for the input.
-- Another big challenge is to calculate the W/L ratio
+- The main challange is to have less rise time, fall time and propagation delay for the input which includes adjusting W/L ratio of the NMOSFETSs and PMOSFETSs.
 - The same logic can be implemented using only 8 MOSFETs either NMOS or PMOS at same technology node but by using the CMOS we can have high propagation speed but the complexity of the design increases.
 
 ## References
