@@ -9,26 +9,65 @@ This report describes the design and Implementation of 4:1 Multiplexer using CMO
 
 ## Implemented Circuit Details
 A Multiplexer circuit, shortly called MUX, is used to select a data line as output from multiple input data lines by using input select lines. To get an output data line from N input data lines that is N:1 MUX, we require log<sub>2</sub><sup>N</sup> select lines.
-The representation of 4:1 MUX is as shown below 
+The representation of 4:1 MUX is as shown below in figure(1)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/mux_symbol.png" width="300" height ="300"></p>
-<figcaption><p align = "center">4:1 MUX Representation</p></figcaption>
+<figcaption><p align = "center">Figure(1) 4:1 MUX Representation</p></figcaption>
 </figure>
 
 The truth table of the 4:1 MUX is as shown,
 
+<table align="center">
+  <tr>
+    <th>S<sub>0</sub></th>
+    <th>S<sub>1</sub></th>
+    <th>Out</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>D</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>C</td>
+  </tr>
+   <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>A</td>
+  </tr>
+</table>
+<!---
 | S<sub>0</sub> | S<sub>1</sub> | Out |
 |    :----:   |    :----:   |    :----:   |
 |0|0|D|
 |0|1|C|
 |1|0|B|
 |1|1|A|
-
-The reference circuit is as shown below
+--->
+The reference circuit is as shown below in figure(2)
 <figure>
 <p align="center"><img src="https://github.com/gaeyasrisatyavinnakota/4to1_MUX_using_CMOS_Logic/blob/main/Images/cir_img.png" width="600" height ="500"></p>
-<figcaption><p align = "center">Reference Circuit</p></figcaption>
+<figcaption><p align = "center">Figure(2) Reference Circuit</p></figcaption>
 </figure>
+
+As per the reference circuit, the 4:1 MUX is designed using CMOS logic and both the Pull-up (made of the PMOS) and pull-down (made of the NMOS) networks pull the output to the input data lines, and the input select lines are given to the MOSFETs' gates.
+
+## Working of the design
+
+- When both the select lines are logic 0, NMOS in the pull-down network and PMOS  in the pull-up network of D input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the D input line.
+- When select lines 0 is logic 0 and select line 1 is logic 1, NMOS in the pull-down network and PMOS  in the pull-up network of C input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the C input line.
+- When select lines 0 is logic 1 and select line 1 is logic 0, NMOS in the pull-down network and PMOS  in the pull-up network of B input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the B input line.
+- When both the select lines are logic 1, NMOS in the pull-down network and PMOS  in the pull-up network of A input line becomes shoert circuited and pull-up and pull-down networks of all other input lines becomes open circuit and the output becomes the A input line.
+
+## Implemented Design
 
 ## Schematic Netlist
 
